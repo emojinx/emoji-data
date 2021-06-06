@@ -130,16 +130,18 @@ export async function buildEmoji() {
     res[hex].tags.length && res[hex].tags.filter(tag => tag.length)
   }
 
-  return res
+  const arrayRes: GrandEmoji[] = []
+  Object.values(res).forEach(emoji => arrayRes.push(emoji))
+
+  return arrayRes;
 }
 
-export function buildGroupedEmoji(emojiList: Record<string, GrandEmoji>) {
-  const emojis = Object.values(emojiList)
+export function buildGroupedEmoji(emojiList: GrandEmoji[]) {
 
   const emojisWithoutGroup: GrandEmoji[] = [];
   const emojisGrouped: Record<string, GrandEmoji[]> = {}
 
-  emojis.forEach(emoji => {
+  emojiList.forEach(emoji => {
     if (!emoji.group) {
       emojisWithoutGroup.push(emoji)
     } else {
