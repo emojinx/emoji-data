@@ -1,5 +1,5 @@
 import { emojiDataPngSprites, svgmojiData, openmojiData } from './data-urls.ts'
-import { OpenmojiEmoji, SvgmojiEmoji, EmojidataData, GrandEmoji } from './types.ts'
+import { OpenmojiEmoji, SvgmojiEmoji, EmojidataData, GrandEmoji } from '../types/types.d.ts'
 
 /**************************************************************************************************************************/
 
@@ -29,8 +29,14 @@ async function getHashedOpenmojiData() {
       delete emoji.openmoji_date
       delete emoji.unicode
 
-      emoji.tags = (emoji.tags as string).split(',').map(tag => tag.trim())
-      emoji.openmoji_tags = (emoji.openmoji_tags as string).split(',').map(tag => tag.trim())
+      emoji.tags = (emoji.tags as string).split(',')
+        .map(tag => tag.trim())
+        .filter(tag => tag.length)
+      emoji.openmoji_tags = (emoji.openmoji_tags as string).split(',')
+        .map(tag => tag.trim())
+        .filter(tag => tag.length)
+
+      if (!emoji.openmoji_tags.length) delete emoji.openmoji_tags
 
       res[emoji.hexcode.toLowerCase()] = emoji
     }
@@ -122,7 +128,6 @@ export async function buildEmoji() {
     !res[hex].skintone_base_hexcode && delete res[hex].skintone_base_hexcode
 
     res[hex].tags.length && res[hex].tags.filter(tag => tag.length)
-    res[hex].openmoji_tags.length && res[hex].openmoji_tags.filter(tag => tag.length)
   }
 
   return res
