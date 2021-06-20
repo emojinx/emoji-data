@@ -112,7 +112,10 @@ export async function buildEmoji() {
     if (hashedSvgmoji[hex]) {
       if (hashedSvgmoji[hex].tags?.length) res[hex].tags = [...new Set([...res[hex].tags, ...hashedSvgmoji[hex].tags])]
       if (hashedSvgmoji[hex].version) res[hex].version = hashedSvgmoji[hex].version
-      if (hashedSvgmoji[hex].skins) res[hex].skins = hashedSvgmoji[hex].skins
+      if (hashedSvgmoji[hex].skins) {
+        res[hex].skintone = 0
+        res[hex].skins = hashedSvgmoji[hex].skins
+      }
     }
 
     res[hex].sheets = {
@@ -122,7 +125,7 @@ export async function buildEmoji() {
       twitter: addSpriteData('twitter', hex, twitterData),
     }
 
-    !res[hex].skintone && delete res[hex].skintone
+    if (res[hex].skintone !== 0 && !res[hex].skintone) delete res[hex].skintone
     !res[hex].skintone_combination && delete res[hex].skintone_combination
     !res[hex].skintone_base_emoji && delete res[hex].skintone_base_emoji
     !res[hex].skintone_base_hexcode && delete res[hex].skintone_base_hexcode
