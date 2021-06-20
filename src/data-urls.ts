@@ -1,28 +1,23 @@
 export const emojiDataPngSprites = {
   apple: {
-    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@6.0.1/img/apple/sheets-256/64.png",
-    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@6.0.1/img/apple/sheets-clean/64.png",
-    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@6.0.1/emoji.json"
+    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@7.0.2/img/apple/sheets-256/64.png",
+    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@7.0.2/img/apple/sheets-clean/64.png",
+    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-apple@7.0.2/emoji.json"
   },
   twitter: {
-    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-twitter@6.0.1/emoji.json",
-    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-twitter@6.0.1/img/twitter/sheets-256/64.png",
-    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-twitter@6.0.1/img/twitter/sheets-clean/64.png"
+    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-twitter@7.0.2/emoji.json",
+    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-twitter@7.0.2/img/twitter/sheets-256/64.png",
+    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-twitter@7.0.2/img/twitter/sheets-clean/64.png"
   },
   google: {
-    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-google@6.0.1/emoji.json",
-    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-google@6.0.1/img/google/sheets-256/64.png",
-    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-google@6.0.1/img/google/sheets-clean/64.png"
+    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-google@7.0.2/emoji.json",
+    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-google@7.0.2/img/google/sheets-256/64.png",
+    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-google@7.0.2/img/google/sheets-clean/64.png"
   },
   facebook: {
-    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@6.0.1/emoji.json",
-    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@6.0.1/img/facebook/sheets-256/64.png",
-    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@6.0.1/img/facebook/sheets-clean/64.png"
-  },
-  messenger: {
-    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-messenger@4.1.0/emoji.json",
-    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-messenger@4.1.0/img/messenger/sheets-256/64.png",
-    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-messenger@4.1.0/img/messenger/sheets/64.png",
+    data: "https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@7.0.2/emoji.json",
+    sprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@7.0.2/img/facebook/sheets-256/64.png",
+    cleanSprite: "https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@7.0.2/img/facebook/sheets-clean/64.png"
   }
 }
 
