@@ -1,0 +1,12 @@
+{
+  "name": "@emojinx/emoji-data",
+  "version": "0.0.1",
+  "description": "Builds emoji data for consumption",
+  "main": "main.ts",
+  "scripts": {},
+  "author": "uchihamalolan@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  }
+}
