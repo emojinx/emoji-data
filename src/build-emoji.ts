@@ -1,4 +1,4 @@
-import { emojiDataPngSprites, svgmojiData, openmojiData } from './data-urls.ts'
+import { emojiDataOfPngSprites, svgmojiData, openmojiData } from './data-urls.ts'
 import { OpenmojiEmoji, SvgmojiEmoji, EmojidataData, GrandEmoji } from '../types/types.d.ts'
 
 /**************************************************************************************************************************/
@@ -11,8 +11,8 @@ async function fetchSvgmojiData() {
   const res = await fetch(svgmojiData)
   return await res.json()
 }
-async function fetchEmojiPngData(sprite: keyof typeof emojiDataPngSprites) {
-  const res = await fetch(emojiDataPngSprites[sprite].data)
+async function fetchEmojiPngData(sprite: keyof typeof emojiDataOfPngSprites) {
+  const res = await fetch(emojiDataOfPngSprites[sprite])
   return await res.json()
 }
 
@@ -53,7 +53,7 @@ async function getHashedSvgmoji() {
   
   return res
 }
-async function getHashedEmojidataData(sprite: keyof typeof emojiDataPngSprites) {
+async function getHashedEmojidataData(sprite: keyof typeof emojiDataOfPngSprites) {
   const res = {} as Record<string, EmojidataData>
 
   const emojis = await fetchEmojiPngData(sprite) as EmojidataData[]
