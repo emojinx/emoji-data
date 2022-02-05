@@ -8,6 +8,9 @@ async function handleRequest(request: Request): Promise<Response> {
     return new Response(file, {
       headers: {
         "content-type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "max-age=31536000"
+
       },
     });
   }
@@ -17,6 +20,8 @@ async function handleRequest(request: Request): Promise<Response> {
     return new Response(file, {
       headers: {
         "content-type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "max-age=31536000"
       },
     });
   }
