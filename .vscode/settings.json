@@ -1,0 +1,9 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "deno.config": "./tsconfig.json",
+  "deno.path": "/Users/malolan/.deno/bin/deno",
+  "deno.importMap": "./import_map.json",
+  "editor.tabSize": 2
+}
